@@ -74,6 +74,11 @@ h1{
 h2 {
     font-size: 2em;
 }
+h4 {
+    color: #999;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 a{
     color: #6397B5;
 }      
@@ -169,6 +174,7 @@ p {
     display: inline-block;
     margin: 0 0.5em;
 }
+
 /* BIO STYLES*/        
 .bio-wrapper{              
     font-size: 24px;   
@@ -212,7 +218,13 @@ p {
 .bio-copy a {
     color: green;
 }        
+
 /* HERO STYLES */
+.half-hero {
+    background-position: center center;
+    background-size: cover;
+    height: 40vh;
+}
 .full-hero {    
     background-color: #C7DBFC;
     background-size: cover;
@@ -306,6 +318,16 @@ p {
 }
 
 /* COLUMN STYLES */
+.col-two {
+    display: flex;
+}
+.col-two .col-aside {
+    flex: 0 0 20em;
+    order: 1;
+}
+.col-two .col-content {
+    flex: 1;
+}
 .col-three {
     display: flex;
     flex: 1;
@@ -364,3 +386,101 @@ position: relative;
 .gallery-info h3 {
     margin-bottom: 1em;
 }
+/* PAGE STYLES */
+.page {
+    margin: 10vh auto 15vh;
+    max-width: 980px;
+    width: 85vw;
+}
+.page h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+.page h2 {
+    margin-bottom: 0.5em;
+}
+.page h4 {
+    margin-bottom: 1em;
+}
+
+/* #### BOLG STYLES ### */
+.blog-recent {
+    text-align: right;
+}
+.blog-title-list {
+    list-style: none;
+    padding: 0;
+}
+.blog-title-list li ~ li {
+    margin-top: 1.5em;
+}
+.blog-title-list span {
+    color: #999;
+    display: block;
+    font-size: 0.8em;
+    font-style: italic;
+    margin-top: 0.5em;
+}
+.blog-posts ~ .blog-posts {
+    border-top: 1px dotted rgba(0, 0, 0, 0.1);
+    margin-top: 4em;
+    padding-top: 4em;
+}
+.blog-posts .post-header {
+    font-size: 0.8rem;
+}
+.post {
+    width: 100%;
+}
+.post-content, .post-footer {
+    margin: auto;
+    max-width: 40em;
+    width: 85vw;
+}
+.post-header {
+    margin-bottom: 1.5em;
+}
+.post-header img, .post-header .social-link {
+    margin-right: 0.5em;
+}
+.post-header img {
+    border-radius: 99px;
+    display: inline-block;
+    height: 2.5em;
+    vertical-align: middle;
+}
+.post-image {
+    background-position: center;
+    background-size: cover;
+    height: 6em;
+    margin-bottom: 1.5em;
+}
+.pull-left {
+    float: left;
+    margin: 2em 2em 2em -2%;
+}
+.pull-right {
+    float: right;
+    margin: 2em -2% 2em 2em;
+}
+.post-aside {
+    background-color: rgba(0, 0, 0, 0.01);
+    float: right;
+    margin: 0 0 2em 2em;
+    padding:  2em;
+}
+.post .post-header {
+    margin-bottom: 2,5em;
+    text-align: center;
+}
+.post-content {
+    font-size: 1.1rem;
+}
+.post-footer{
+    font-style: italic;
+    font-size: 0.8em;
+    margin-top: 3em;
+    padding-top: 2em;
+}
+    
