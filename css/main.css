@@ -48,7 +48,16 @@ a img {
 
 /* GLOBAL STYLES*/
 body{
+    display: flex;
+    flex-direction: column;
     font-family: helvetica, arial, sans;
+    min-height: 100vh;
+}
+.content-container {
+    display: flex;
+    flex: 1 1 auto;
+    padding-top: 10vh;
+    width: 100%;
 }
 html {
     box-shadow: 0 0 0 30px #000 inset;
@@ -77,6 +86,7 @@ h2 ~ p {
 } 
 p {
     line-height: 1.5;
+    margin: 0.75em 0;
 }
 /* HEADER STYLES*/ 
 .header{
@@ -207,8 +217,7 @@ p {
     background-color: #C7DBFC;
     background-size: cover;
     box-sizing: border-box;
-    height: 100vh;         
-    padding-top: 10vh;        
+    height: 90vh;             
 }  
 .full-hero::after {
     border: 10px solid;
@@ -274,15 +283,84 @@ p {
     margin-bottom: 1.5rem;
 }
 .home-callout {
+    align-items: center;
     background-color: #000;
     color: #FFF;
+    display: flex;
     padding: 7vh 0;
 }
+.home-callout h3 {
+    color: inherit;
+    margin-top: 1em;
+}
 .callout-title {
+    flex: 1; /* igual al flex: 1 1 0;*/      
     font-size: 5.75vw;
     text-align: right;
     text-transform: uppercase;
 }
 .callout-copy {
+    flex: 0 0 45em;   
     font-size: 0.8rem;
+    padding: 03 vw;
+}
+
+/* COLUMN STYLES */
+.col-three {
+    display: flex;
+    flex: 1;
+}
+.col {
+    box-sizing: border-box;
+    padding: 2em;
+}
+.col-three .col ~ .col{
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.col-three .col-nav {
+    flex: 0 0 15em;
+}
+.col-three .col-content {
+    flex: 1;
+}
+.col-three .col-aside {
+    flex: 0 1 20em;
+}
+
+/* GALLERY STYLES*/
+
+.gallery-thumbs {
+    height: 90vh;
+    overflow: scroll;
+}
+.gallery-thumbs > div {
+    cursor: pointer;
+}
+.gallery-thumbs img {
+    box-sizing: border-box;
+    box-shadow:  0 0 0 5px transparent;
+    display:  inline-block;
+    margin: 0 0 10px;
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+.gallery-thumbs img:hover {
+    opacity: 1;
+}
+.gallery-thumbs .current img {
+    box-shadow: 0 0 0 5px #ED6E2F;
+    opacity: 1;
+}
+.gallery-photo {
+position: relative;
+}
+.gallery-photo img {
+    width: 100%;
+}
+.gallery-info{
+    font-size: 0.8rem;    
+}
+.gallery-info h3 {
+    margin-bottom: 1em;
 }
