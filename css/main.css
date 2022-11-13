@@ -188,7 +188,7 @@ a img {
 body{
     display: flex;
     flex-direction: column;
-    font-family: helvetica, arial, sans;
+    font-family: 'Open Sans' helvetica, arial, sans;
     min-height: 100vh;
 }
 .content-container {
@@ -204,6 +204,10 @@ html {
 html, body {
     margin: 0;
     padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', helvetica, sans;
+    font-weight: 100;
 }
 h1{
     font-size: 7vw;
